@@ -1,0 +1,45 @@
+dependencies:
+- name: employee-service
+  repository: file://charts/employee-service
+  version: 0.1.0
+- name: api
+  repository: file://charts/api
+  version: 0.1.0
+- name: payroll-app
+  repository: file://charts/payroll-app
+  version: 0.1.0
+- name: process-paycheck-with-tax-service
+  repository: file://charts/process-paycheck-with-tax-service
+  version: 0.1.0
+- name: process-paycheck-without-tax-service
+  repository: file://charts/process-paycheck-without-tax-service
+  version: 0.1.0
+- name: timesheet
+  repository: file://charts/timesheet
+  version: 0.1.0
+- name: timeTracking-app
+  repository: file://charts/timeTracking-app
+  version: 0.1.0
+- name: integration-app
+  repository: file://charts/integration-app
+  version: 0.1.0
+- name: external-api
+  repository: file://charts/external-api
+  version: 0.1.0
+- name: knowledge-base
+  repository: file://charts/knowledge-base
+  version: 0.1.0
+- name: sftp-app
+  repository: file://charts/sftp-app
+  version: 0.1.0
+- name: paycor
+  repository: file://charts/paycor
+  version: 0.1.0
+- name: timesheet-batch
+  repository: file://charts/timesheet-batch
+  version: 0.1.0
+- name: monolith
+  repository: file://charts/monolith
+  version: 0.1.0
+digest: sha256:e39e94b1d72b36ba8aa29975f8f0b252f667645a2443b1c3fe30e7672b4f4ef0
+generated: "2026-04-15T13:06:09.434384305+05:30"

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: external-api
+  labels:
+    app: external-api
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: external-api
+  template:
+    metadata:
+      labels:
+        app: external-api
+    spec:
+      containers:
+        - name: external-api
+          image: hashicorp/http-echo
+          args:
+            - "-text=external-api running"
+          ports:
+            - containerPort: 5678

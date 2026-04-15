@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: integration-app
+  labels:
+    app: integration-app
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: integration-app
+  template:
+    metadata:
+      labels:
+        app: integration-app
+    spec:
+      containers:
+        - name: integration-app
+          image: hashicorp/http-echo
+          args:
+            - "-text=integration-app running"
+          ports:
+            - containerPort: 5678

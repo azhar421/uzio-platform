@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: knowledge-base
+  labels:
+    app: knowledge-base
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: knowledge-base
+  template:
+    metadata:
+      labels:
+        app: knowledge-base
+    spec:
+      containers:
+        - name: knowledge-base
+          image: hashicorp/http-echo
+          args:
+            - "-text=knowledge-base running"
+          ports:
+            - containerPort: 5678

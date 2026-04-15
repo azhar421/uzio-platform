@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sftp-app
+  labels:
+    app: sftp-app
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sftp-app
+  template:
+    metadata:
+      labels:
+        app: sftp-app
+    spec:
+      containers:
+        - name: sftp-app
+          image: hashicorp/http-echo
+          args:
+            - "-text=sftp-app running"
+          ports:
+            - containerPort: 5678

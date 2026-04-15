@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paycor
+  labels:
+    app: paycor
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: paycor
+  template:
+    metadata:
+      labels:
+        app: paycor
+    spec:
+      containers:
+        - name: paycor
+          image: hashicorp/http-echo
+          args:
+            - "-text=paycor running"
+          ports:
+            - containerPort: 5678

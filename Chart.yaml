@@ -1,0 +1,61 @@
+apiVersion: v2
+name: uzio-platform
+description: Umbrella chart for all microservices
+version: 1.0.0
+
+dependencies:
+  - name: employee-service
+    version: 0.1.0
+    repository: "file://charts/employee-service"
+
+  - name: api
+    version: 0.1.0
+    repository: "file://charts/api"
+
+  - name: payroll-app
+    version: 0.1.0
+    repository: "file://charts/payroll-app"
+
+  - name: process-paycheck-with-tax-service
+    version: 0.1.0
+    repository: "file://charts/process-paycheck-with-tax-service"
+
+  - name: process-paycheck-without-tax-service
+    version: 0.1.0
+    repository: "file://charts/process-paycheck-without-tax-service"
+
+  - name: timesheet
+    version: 0.1.0
+    repository: "file://charts/timesheet"
+
+  - name: timeTracking-app
+    version: 0.1.0
+    repository: "file://charts/timeTracking-app"
+
+  - name: integration-app
+    version: 0.1.0
+    repository: "file://charts/integration-app"
+
+  - name: external-api
+    version: 0.1.0
+    repository: "file://charts/external-api"
+
+  - name: knowledge-base
+    version: 0.1.0
+    repository: "file://charts/knowledge-base"
+
+  - name: sftp-app
+    version: 0.1.0
+    repository: "file://charts/sftp-app"
+
+  - name: paycor
+    version: 0.1.0
+    repository: "file://charts/paycor"
+
+  - name: timesheet-batch
+    version: 0.1.0
+    repository: "file://charts/timesheet-batch"
+
+  - name: monolith
+    version: 0.1.0
+    repository: "file://charts/monolith"

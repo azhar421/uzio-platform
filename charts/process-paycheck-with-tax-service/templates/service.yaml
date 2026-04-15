@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: process-paycheck-with-tax-service
+spec:
+  selector:
+    app: process-paycheck-with-tax-service
+  ports:
+    - port: 80
+      targetPort: 5678

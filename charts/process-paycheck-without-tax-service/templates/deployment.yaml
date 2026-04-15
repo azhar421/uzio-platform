@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: process-paycheck-without-tax-service
+  labels:
+    app: process-paycheck-without-tax-service
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: process-paycheck-without-tax-service
+  template:
+    metadata:
+      labels:
+        app: process-paycheck-without-tax-service
+    spec:
+      containers:
+        - name: process-paycheck-without-tax-service
+          image: hashicorp/http-echo
+          args:
+            - "-text=process-paycheck-without-tax-service running"
+          ports:
+            - containerPort: 5678

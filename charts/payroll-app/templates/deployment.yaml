@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payroll-app
+  labels:
+    app: payroll-app
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payroll-app
+  template:
+    metadata:
+      labels:
+        app: payroll-app
+    spec:
+      containers:
+        - name: payroll-app
+          image: hashicorp/http-echo
+          args:
+            - "-text=payroll-app running"
+          ports:
+            - containerPort: 5678

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: timeTracking-app
+spec:
+  selector:
+    app: timeTracking-app
+  ports:
+    - port: 80
+      targetPort: 5678

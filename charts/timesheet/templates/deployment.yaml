@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: timesheet
+  labels:
+    app: timesheet
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: timesheet
+  template:
+    metadata:
+      labels:
+        app: timesheet
+    spec:
+      containers:
+        - name: timesheet
+          image: hashicorp/http-echo
+          args:
+            - "-text=timesheet running"
+          ports:
+            - containerPort: 5678
