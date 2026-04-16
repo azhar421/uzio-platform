@@ -28,9 +28,9 @@ dependencies:
     version: 0.1.0
     repository: "file://charts/timesheet"
 
-  - name: timeTracking-app
+  - name: timetracking-app
     version: 0.1.0
-    repository: "file://charts/timeTracking-app"
+    repository: "file://charts/timetracking-app"
 
   - name: integration-app
     version: 0.1.0

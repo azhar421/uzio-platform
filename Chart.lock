@@ -17,8 +17,8 @@ dependencies:
 - name: timesheet
   repository: file://charts/timesheet
   version: 0.1.0
-- name: timeTracking-app
-  repository: file://charts/timeTracking-app
+- name: timetracking-app
+  repository: file://charts/timetracking-app
   version: 0.1.0
 - name: integration-app
   repository: file://charts/integration-app
@@ -41,5 +41,5 @@ dependencies:
 - name: monolith
   repository: file://charts/monolith
   version: 0.1.0
-digest: sha256:e39e94b1d72b36ba8aa29975f8f0b252f667645a2443b1c3fe30e7672b4f4ef0
-generated: "2026-04-15T13:06:09.434384305+05:30"
+digest: sha256:9058d702e1def92fcc1f11d9d74803a953f44d8ecc8381472f5418ed1d1a3ab8
+generated: "2026-04-16T12:37:22.781875806+05:30"

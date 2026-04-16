@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: timeTracking-app
+  name: timetracking-app
   labels:
-    app: timeTracking-app
+    app: timetracking-app
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: timeTracking-app
+      app: timetracking-app
   template:
     metadata:
       labels:
-        app: timeTracking-app
+        app: timetracking-app
     spec:
       containers:
-        - name: timeTracking-app
+        - name: timetracking-app
           image: hashicorp/http-echo
           args:
-            - "-text=timeTracking-app running"
+            - "-text=timetracking-app running"
           ports:
             - containerPort: 5678
